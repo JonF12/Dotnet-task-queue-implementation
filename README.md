@@ -1,15 +1,17 @@
 Simple, clean queue implementation for .NET
 
-Supports:
+Features:
 
-Progress logging
+* Dependency Injection container has its own scope, services will only be disposed after the job is complete.
 
-Automatic tracking of job status
+* Progress logging
 
-Scheduling tasks by job type
+* Automatic tracking of job status
 
-Allowing user to define conflicting jobs which are not to be run
+* Scheduling tasks by job type
 
-Adding strongly typed custom job parameters
+* Allowing user to define conflicting jobs which are not to be run
+
+* Adding strongly typed custom job parameters
 
 
