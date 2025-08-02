@@ -15,11 +15,9 @@ public sealed class SuccessfulJob : IJob<SuccessfulJob, SuccessfulJobParameters>
     {
         context.LogProgress($"Attempting to fetch from db... job params: someParameter: {context.Parameters.someParameter} count: {context.Parameters.count}");
 
-        await Task.Delay(1000 * 5);
+        await Task.Delay(5000);
 
-        context.LogProgress("Fatal error, exception thrown...");
-
-        throw new Exception("Something happened");
+        context.LogProgress("Success! job is complete");
 
         return Unit.Default;
     }
