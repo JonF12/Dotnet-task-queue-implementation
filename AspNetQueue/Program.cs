@@ -1,3 +1,4 @@
+using AspNetQueue.Services;
 using AspNetQueue.Services.JobQueue;
 using AspNetQueue.Services.Jobs;
 
@@ -15,6 +16,7 @@ builder.Services.AddSingleton<IJobQueue, JobQueue>();
 builder.Services.AddScoped<FailingJob>();
 builder.Services.AddScoped<SuccessfulJob>();
 builder.Services.AddScoped<LongRunningJob>();
+builder.Services.AddScoped<IGenericService, GenericService>();
 
 var app = builder.Build();
 
